@@ -1,0 +1,46 @@
+% O label serve para referenciar o capÃ­tulo quando necessÃ¡rio
+\chapter{IntroduÃ§Ã£o}\label{cap:introducao}
+
+O conceito de \textit{Smart Cities} (Cidades Inteligentes, em traduÃ§Ã£o livre) Ã© um sustentÃ¡culo elementar para o desenvolvimento urbano sustentÃ¡vel. De certa forma, ele poderia contribuir na soluÃ§Ã£o de diversos problemas crÃ­ticos, originados a partir da urbanizaÃ§Ã£o de grandes cidades (\cris{por exemplo,}, congestionamentos, poluiÃ§Ã£o do meio ambiente, e os limites dos recursos naturais) \cite{pan2013}.
+
+Um outro aspecto do conceito de cidades inteligentes a ser considerado, Ã© a importÃ¢ncia crescente das tecnologias digitais para um futuro sustentÃ¡vel. Assim sendo, destaca-se seis principais Ã¡reas, nas quais essas inovaÃ§Ãµes digitais tem a competÃªncia para fazer a diferenÃ§a: vida inteligente, governanÃ§a inteligente, economia inteligente, ambiente inteligente, pessoas inteligentes e mobilidade inteligente \cite{journals/jtaer/SchuurmanBMM12}.
+
+Com o uso da tecnologia da informaÃ§Ã£o e comunicaÃ§Ã£o (\cris{do inglês } \crisC{atenção, nao estao sendo mostradas as siglas. Eh preciso fazer diferente! vou fazer na primeira sigla e voces corrigem nas demais, ok? \sigla{S-ACO}{\emph{Simple Ant Colony Algorithm}} (\emph{Simple Ant Colony Algorithm})} \cris{\sigla{ICT}{\emph{Information and Communication Technology}} (\emph{Information and Communication Technology}),} a  anÃ¡lise e mineraÃ§Ã£o de dados de sensoriamento \cris{nas} grande cidades Ã© um passo importante para considerÃ¡-las uma cidade inteligente. Por exemplo, informaÃ§Ãµes sobre a mobilidade dos veÃ­culos e pessoas tornaram-se temas em voga nos Ãºltimos tempos  devido Ã  prevalÃªncia do \sigla{GPS}{Global Positioning System} e outras tecnologias de localizaÃ§Ã£o. Esse conhecimento sobre a cidade e seus habitantes poderÃ¡ trazer benefÃ­cios nas Ã¡reas de transporte, planejamento urbano, saÃºde pÃºblica, seguranÃ§a pÃºblica e comÃ©rcio \cite{pan2013}.
+
+Embora as aÃ§Ãµes de sensoriamento e mineraÃ§Ã£o dos dados seja de imprescindÃ­vel importÃ¢ncia, algo deve ser feito para transformar esses dados em informaÃ§Ãµes. Nesse sentido, uma abordagem interessante para a resoluÃ§Ã£o desta questÃ£o consiste no conceito de \textit{crowdsourcing} \cite{shur}.
+
+\citeonline{Howe2006} caracteriza \textit{crowdsourcing} como o fenÃ´meno no qual vÃ¡rias pessoas comuns dedicam seu tempo livre na busca de soluÃ§Ãµes para um problema de interesse coletivo. Isto posto, a massificaÃ§Ã£o dos chamados \textit{smartphones} e o advento de redes mÃ³veis tais como o 3G e, recentemente, o 4G \crisC{citar o WiFi também}, permitem que pessoas fiquem conectadas a maior parte do tempo, em qualquer lugar. Dentre os inÃºmeros benefÃ­cios que os \textit{smartphones} fornecem, a possibilidade de troca de informaÃ§Ãµes entre usuÃ¡rios Ã© uma delas, bem como a aplicaÃ§Ã£o do conceito de \textit{crowdsourcing}.
+
+Considera-se o seguinte cenÃ¡rio: uma pessoa que acabou de chegar em um ponto de Ã´nibus, deseja saber onde o mesmo se encontra. QuestÃµes como ``serÃ¡ que o Ã´nibus estÃ¡ chegando?'', ``serÃ¡ que vai demorar?'' ou ``serÃ¡ que o Ã´nibus estragou?'' sÃ£o bastante comuns. Mas como descobrir suas respostas? Infelizmente, nÃ£o Ã© possÃ­vel respondÃª-las apenas com a tabela de horÃ¡rios de chegada dos Ã´nibus, disponÃ­vel nos terminais e no \textit{site} da \sigla{Urbs}{Companhia de UrbanizaÃ§Ã£o e Saneamento de Curitiba}. \crisC{acho que o correto é URBS e nao Urbs, certo?}
+
+Nesse sentido, Ã© proposto nesse documento uma soluÃ§Ã£o possÃ­vel para esse quesito. A ideia bÃ¡sica Ã© a construÃ§Ã£o de um aplicativo que alie conceitos, tanto de \textit{Smart Cities} quanto de \textit{crowdsourcing}, no qual informaÃ§Ãµes em tempo real sobre o transporte coletivo, especificamente no que compete o estado atual de uma linha de Ã´nibus, sejam disponibilizadas aos passageiros \crisC{talvez, seja melhor usuário e não passageiro, pois pessoas de fora do ônibus tbm recebem info, certo?}.
+
+%breve estado da arte
+
+Alguns aplicativos para dispositivos mÃ³veis foram desenvolvidos com o objetivo de prover, ao usuÃ¡rio, informaÃ§Ãµes referentes ao transporte pÃºblico. Um dos aplicativos mais recentes Ã© o chamado ``BusÃ£o Curitibano'', lanÃ§ado em 2013\footnote{Para mais informaÃ§Ãµes sobre o aplicativo, consultar notÃ­cia da Gazeta do Povo, disponÃ­vel em:  http://www.gazetadopovo.com.br/vidaecidadania/conteudo.phtml?id=1377575}. Os desenvolvedores -- e tambÃ©m os usuÃ¡rios do aplicativo -- encontraram algumas resistÃªncias por parte da URBS, pois o aplicativo usava a base de dados do transporte coletivo. Devido aos inÃºmeros acessos, acabava derrubando o servidor da Urbs e tornando o serviÃ§o de acompanhamento de Ã´nibus indisponÃ­vel.
+
+Outro aplicativo semelhante foi desenvolvido por \citeonline{sujatha}. Os autores propuseram um sistema chamado \sigla{MBTS}{Mobile Bus Tracking System} que ajuda qualquer pessoa a obter informaÃ§Ãµes de um determinado Ã´nibus sem fazer ligaÃ§Ãµes ou perturbar passageiros com mensagens SMS. O sistema funciona com, basicamente, trÃªs atores: os passageiros, os â€œcoordenadoresâ€ do Ã´nibus e as pessoas que estÃ£o aguardando em um ponto. Todos os atores necessitam de um \textit{smartphone} com sistema operacional Android conectado Ã  Internet. Continuamente, os passageiros e os ``coordenadores'' alimentam um banco de dados com informaÃ§Ãµes sobre o Ã´nibus, tais como as coordenadas do veÃ­culo, as quais estarÃ£o disponÃ­veis para as pessoas que estÃ£o aguardando pelo Ã´nibus. \crisC{depois no capitulo de estado da arte, vocês precisam detalhar mais esse sistemas, onde fica o BD, como é a comunicação usuário - BD, etc.}
+
+\section{Justificativa}
+
+A utilizaÃ§Ã£o de uma arquitetura centralizada, estilo cliente--servidor, Ã© um ponto comum nos dois trabalhos \cris{relacionados} apresentados. Em ambos, nota-se que a arquitetura encontra-se em uma relaÃ§Ã£o n:1, ou seja, vÃ¡rios clientes para um Ãºnico servidor. Alguns dos problemas que podem surgir nesse tipo de arquitetura Ã© que o servidor pode ficar sobrecarregado e eventualmente ficar indisponÃ­vel devido ao grande nÃºmero de usuÃ¡rios utilizando o serviÃ§o, como foi o caso do ``BusÃ£o Curitibano''. AlÃ©m disso, nesse caso, o servidor utilizado nÃ£o Ã© de propriedade dos desenvolvedores, mas sim da Urbs. Caso a companhia deseje interromper o serviÃ§o de fornecimento de dados, o ``BusÃ£o Curitibano'' perde sua utilidade. Isso nÃ£o constitui um problema para o MBTS, pois o mesmo concentra as informaÃ§Ãµes em um servidor prÃ³prio, mantido pelos prÃ³prios desenvolvedores.
+
+Sendo assim, a principal motivaÃ§Ã£o para o desenvolvimento deste projeto Ã© implementar um aplicativo de acompanhamento de Ã´nibus para dispositivos mÃ³veis -- \textit{smartphones} -- que utilize uma rede descentralizada, onde os prÃ³prios usuÃ¡rios sÃ£o \cris{os} nÃ³s dessa rede, que trocarÃ£o informaÃ§Ãµes entre si. Aliado Ã  isso, usufruir do recurso de GPS, jÃ¡ utilizado nos Ã´nibus de Curitiba, para fornecer a posiÃ§Ã£o dos veÃ­culos.
+
+\section{Objetivo geral}
+
+Desenvolver um aplicativo para \textit{smartphones} que rodam sobre o sistema operacional Android, para acompanhamento de Ã´nibus em Curitiba, unindo idÃ©ias de aplicativos jÃ¡ existentes, como o ``Waze'' \crisC{ainda nao foi falado do Waze, talvez precise falar um pouco} e ``BusÃ£o Curitibano'', e o conceito de \textit{crowdsourcing}.
+
+\section{Objetivos especÃ­ficos}
+
+\begin{itemize}
+\item Desenvolver um aplicativo, para \textit{smartphones}, para acompanhamento de Ã´nibus da rede de transporte de Curitiba;
+\item Estudar e implementar no aplicativo o conceito de \textit{crowdsourcing}, para permitir que usuÃ¡rios colaborem entre si com informaÃ§Ãµes pertinentes, atravÃ©s de \textit{feedbacks} prÃ©-definidos no aplicativo;
+\item Desenvolver o aplicativo para que o mesmo \crisC{seja executado} sobre uma plataforma que nÃ£o exija custos de desenvolvimento;
+\item Implementar uma arquitetura de rede descentralizada, a fim de evitar problemas como sobrecarga de servidor.
+\end{itemize}
+
+\section{Estrutura e organizaÃ§Ã£o}
+
+\crisC{Colocar tudo em um único parágrafo. Vou arrumar abaixo}
+O presente documento encontra-se organizado da seguinte forma. O capÃ­tulo 1 apresenta a introduÃ§Ã£o, com a formulaÃ§Ã£o do problema, justificativa do projeto, objetivo geral e especÃ­ficos do mesmo. O capÃ­tulo 2 apresenta o levantamento bibliogrÃ¡fico, importante para fundamentar o projeto e fornecer um embasamento. A metodologia, que descreve as etapas de desenvolvimento pelas quais o projeto percorrerÃ¡, Ã© apresentada no capÃ­tulo 3. Os recursos para desenvolvimento do projeto e a viabilidade do mesmo, sÃ£o apresentados nos capÃ­tulos 4 e 5, respectivamente. Por fim, conclusÃµes pertinentes ao desenvolvimento do projeto, tais como dificuldades esperadas e horizontes de projeto, sÃ£o apresentados no capÃ­tulo 6.

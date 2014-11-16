@@ -1,0 +1,112 @@
+\chapter{Metodologia}\label{cap:metodologia}
+
+A metodologia é uma descrição técnica de como será desenvolvido ou foi desenvolvido o trabalho. Devem estar detalhadas, de forma lógica, linear e cronológica, todas as etapas do projeto.
+
+Deve ser explicado como o produto será gerado, quais são os principais fundamentos (algoritmos, paradigmas, teorias) e tecnologias (ambientes de desenvolvimento, linguagens de programação, plataformas de hardware) a serem empregados.
+
+\section{Fundamentos}\label{s:fundamentos}
+Indicar quais são os quais são os principais fundamentos (algoritmos, paradigmas, teorias) a serem empregados.
+Cada fundamento utilizado deve ser justificado.
+
+\section{Tecnologias}\label{s:tecnologias}
+Indicar quais são os quais são as principais tecnologias (ambientes de desenvolvimento, linguagens de programação, plataformas de hardware) a serem empregadas. Cada tecnologia utilizada deve ser justificada.
+
+\section{Como utilizar figuras}\label{s:usoFiguras}
+
+A legenda de uma figura deve estar abaixo da mesma (ver Figura \ref{fig:ElemPreTextuais}).
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=0.5\columnwidth]{./ElemPreTextuais.png}
+    \caption{Elementos Pré-Textuais de um Trabalho Acadêmico.}Fonte: \cite{NormasUTFPR}
+    \label{fig:ElemPreTextuais}
+\end{center}
+\end{figure}
+
+\section{Como utilizar tabelas}\label{s:usoTabelas}
+
+O título de uma tabela deve estar acima da mesma. A Tabela \ref{tab:publicacao} ilustra um exemplo de uma tabela criada no latex\footnote{Se é a primeira vez que está trabalhando com o latex, comece acessando a página do Prof. Hugo Vieira em http://pessoal.utfpr.edu.br/hvieir/orient/}.
+
+\begin{table}[h!]
+%Se o nome da tabela for muito grande, é possível colocar entre colchetes o título reduzido que será mostrado na lista de tabelas e entre aspas o título completo que será mostrado acima da tabela. O mesmo é válido para figuras.
+
+\caption[Distribuição do percentual de artigos segundo o ano de publicação]{Distribuição do percentual de artigos segundo o ano de publicação, período entre 1995 a 2005.}
+\begin{center}
+%\scalebox{0.75}{
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Ano de Publicação} &\textbf{Número de Artigos} & \textbf{\simbolo{\%}{Percentual} de Artigos} \\ \hline \hline
+1995 & 1 & 2,6	\\
+1998 & 3 &	7,9	\\
+1999 & 3 &	7,9  \\
+2000 & 2 & 5,2 \\
+2001 & 5 & 13,2 \\
+2002 & 5 &	13,2 \\
+2003 & 5 &	13,2  \\
+2004 & 7 &	18,4 \\
+2005 & 7 & 18,4 \\
+Total & 38 & 100 \\ \hline
+\end{tabular}%}
+\end{center}
+\label{tab:publicacao}
+\end{table}
+
+\section{Como escrever equações}\label{s:Equações}
+
+Veja a seguir exemplos equações criadas no latex.
+
+\begin{equation}\label{eq:ACO1}
+p_{ij}^{k}=\left\{\begin{matrix}
+\frac{\tau _{ij}^{\alpha}(t)}{\sum_{j\in N_{i}^{k}}\tau_{ij}^{\alpha}(t)} \; \text{ se } j\in N_{i}^{k} \\
+0 \; \text{ se } j\notin N_{i}^{k}
+\end{matrix}\right.
+\end{equation}
+
+\begin{equation}\label{eq:ACO2}
+\Delta \tau_{ij}^{k}(t) \propto ~\frac{1}{NSaltos^{k}(t)}.
+\end{equation}
+
+\begin{equation}\label{eq:ACO3}
+\tau _{ij}(t+1) = \tau _{ij}(t)+\sum_{k=1}^{n_{k}}\Delta \tau _{i,j}^{k}(t).
+\end{equation}
+
+\begin{equation}\label{eq:ACO4}
+\tau _{ij}(t+\Delta{t}) = (1-\rho)\tau_{ij}(t).
+\end{equation}
+
+\section{Como escrever algoritmos}\label{s:Algoritmos}
+
+O Algoritmo \ref{alg:algS-ACO} apresenta o exemplo de um pseudo-código criado no latex. Para mudar o idioma dos comandos do algoritmo ou encontrar outros comandos, acesse o arquivo algorithmic.sty.
+
+\begin{algorithm}
+\caption{- Pseudocódigo do S-ACO \\ Fonte: Adaptado de \citeonline{ENGELBRECHT2007}}
+\label{alg:algS-ACO}
+\begin{algorithmic}[1]
+\STATE Inicialize o tempo $t \leftarrow 0$
+\STATE Inicialize o valor do feromônio $\tau_{i,j}(0)$
+\STATE Crie $K$ formigas no nó de origem
+\REPEAT
+\FOR{cada formiga $k=1$ to $K$}
+\STATE \COMMENT{Construindo um caminho $x^{k}(t)$}
+\STATE $x^{k}(t) \leftarrow \emptyset$
+\REPEAT
+\STATE Selecione o próximo salto de acordo com a probabilidade da Equação~\ref{eq:ACO1}
+\STATE Adicione o enlace $(i,j)$ ao caminho $x^{k}(t)$
+\UNTIL {o destino seja alcançado}
+\STATE Remova todos os \emph{loops} do caminho $x^{k}(t)$
+\STATE Calcule a qualidade do caminho $f(x^{k}(t))$
+\ENDFOR
+\FORALL{enlace $(i,j)$ do grafo}
+\STATE \COMMENT{Evaporação do Feromônio}
+\STATE Reduza o feromônio $\tau_{i,j}(t)$ usando a Equação~\ref{eq:ACO4}
+\ENDFOR
+\FOR{formiga $k=1$ até $K$}
+\FORALL{enlace $(i,j)$ de $x^{k}(t)$}
+\STATE Atualize a quantidade de feromônio $\tau_{i,j}(t)$ usando as Equações~\ref{eq:ACO2} e~\ref{eq:ACO3}
+\ENDFOR
+\ENDFOR
+\STATE $t \leftarrow t+1$
+\UNTIL{que a condição de parada seja satisfeita}
+\RETURN <caminho $x^{k}(t)$ de melhor qualidade como a solução>
+\end{algorithmic}
+\end{algorithm}

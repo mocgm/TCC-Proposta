@@ -1,0 +1,172 @@
+
+% Proposta TCC1 - Professora Ana Cristina B. Kochem Vendramin (cristina@dainf.ct.utfpr.edu.br, criskochem@utfpr.edu.br)
+
+\documentclass{normas-utf-tex_07_2012} %Estilo de Formato criado pelo Prof. Hugo Vieira Neto (hvieir@utfpr.edu.br)
+%Se você ainda não conhece o latex, comece olhando o site do Prof. Hugo --> http://pessoal.utfpr.edu.br/hvieir/orient/
+
+%\documentclass[twoside,openright]{normas-utf-tex} %openright = o capitulo comeca sempre em paginas impares
+
+%\usepackage[alf,abnt-emphasize=bf,bibjustif,recuo=0cm, abnt-etal-cite=2, abnt-etal-list=99]{abntcite} %configuracao das referencias bibliograficas.
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage[brazil]{babel} % pacote portugues brasileiro
+\usepackage[utf8]{inputenc} % pacote para acentuacao direta
+\usepackage{amsmath,amsfonts,amssymb} % pacote matematico
+\usepackage[pdftex]{graphicx} % pacote grafico
+\usepackage{times} % fonte times
+\usepackage{a4wide}
+\usepackage[a4paper]{geometry} %define papel a4...
+\geometry{left=3cm,right=2cm,top=3cm,bottom=2cm} % ...e suas margens
+\usepackage{tabularx,multirow,longtable} %pacotes para mesclar linhas/colunas; tabelas grandes
+\usepackage{fancyhdr} % altera cabeçalhos
+\usepackage[T1]{fontenc} % acentuação direto no texto
+\usepackage{ae} % “Almost European”: aumenta a qualidade do pdf final
+\usepackage{rotating} % faz rotações de tabelas e figuras
+\usepackage{indentfirst} % tabula a primeira linha do parágrafo
+\usepackage[hang,small,bf]{caption} % legendas; nome "tabela" ou "figura" em negrito
+\usepackage{caption3}
+\usepackage{setspace} % ajuste do espaço entre-linhas
+%\usepackage{algorithm}
+\usepackage{subfig}
+\usepackage{float} % posicionamento das figuras
+\usepackage{subfloat}
+%\usepackage{arydshln}
+%\usepackage[backend=biber]{biblatex}
+\makeatletter
+%\renewcommand{\ALG@name}{Algoritmo}
+%\usepackage{algorithmic}
+
+%para a hifenacao funcionar é necessario fazer a seguinte modificacao
+%Clique em Iniciar -> Programas -> MikTeX -> MiKTeX options Vá em Languages e marque a caixa português.
+
+%hifenacoes customizadas
+\hyphenation{mo-de-lar re-no-vá-veis re-pre-sen-tar re-pre-sen-ta-ção la-te-rais res-pec-ti-vos re-a-ção re-a-li-zan-do o-pe-ra-ções cons-tan-te di-fe-ren-tes tem-pe-ra-tu-ra ex-tre-mi-da-de ter-mo-di-nâ-mi-ca trans-es-te-ri-fi-ca-ção In-ter-net}
+
+%%%% Comandos introduzidos para controlar as alteracoes no fonte%%%%%%%%%%%%%%%%%
+% assigning colors to comments of each author
+\usepackage{color}
+\newcommand{\cris}[1]{\textcolor{blue}{#1}} %texto final
+\newcommand{\crisC}[1]{[\textcolor{blue}{#1}]} % comentário entre colchetes
+\newcommand{\ane}[1]{\textcolor{red}{#1}} %texto final
+\newcommand{\aneC}[1]{[\textcolor{red}{#1}]} % comentário entre colchetes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ---------- Preambulo ----------
+\instituicao{Universidade Tecnológica Federal do Paraná} % nome da instituicao
+\programa{Departamento Acadêmico de Informática} % nome do programa ou departamento
+\area{Curso de Engenharia de Computação} % área ou curso
+
+\documento{Trabalho de Conclusão de Curso} % [Trabalho de Conclus\~ao de Curso] ou [Disserta\c{c}\~ao] ou [Tese]
+\nivel{Graduação} % [Gradua\c{c}\~ao], [Especializa\c{c}\~ao], [Mestrado] ou [Doutorado]
+\titulacao{Engenheiro} % [Engenheiro], [Tecn\'ologo], [Bacharel], [Mestre] ou [Doutor]
+
+\titulo{\MakeUppercase{Utilização de aplicativo móvel e \textit{crowdsourcing} para rastreio de ônibus}} % titulo do trabalho em portugues
+\title{\MakeUppercase{}} % titulo do trabalho em ingles
+
+\autor{Gionatta Marcon Mocellin} % autor do trabalho
+\autordois{Giusepe Pietro Niquele}
+\cita{MOCELLIN, Gionatta Marcon. NIQUELE, Giusepe Pietro} % sobrenome (maiusculas), nome do autor do trabalho
+
+\palavraschave{Incluir as palavras-chave em português} %substituir pelas palavras-chave relacionadas ao seu tema de pesquisa
+\keywords{Incluir as palavras-chave em inglês} % incluir palavras-chave em inglês
+
+\comentario{Proposta de \UTFPRdocumentodata\ de Engenharia de Computação apresentado ao \UTFPRprogramadata\ da \ABNTinstituicaodata\ como requisito parcial para obtenção do título de ``\UTFPRtitulacaodata\ em Computação''.} %\\ \'Area de Concentra\c{c}\~ao: \UTFPRareadata.}
+
+\orientador[Orientadora:]{Prof$^a$. Dr$^a$. Ana Cristina Kochem Vendramin} % <- no caso de orientadora, usar esta sintaxe
+\coorientador[Co-orientadora:]{\hspace*{3mm}Prof$^a$. Dr$^a$. Anelise Munaretto \newline \hspace*{3mm}Fonseca} % <- no caso de co-orientadora, usar esta sintaxe
+
+
+\local{Curitiba} % cidade
+\data{2014} % ano
+\setcounter{tocdepth}{4} % para numeração das seções
+\setcounter{secnumdepth}{4}
+
+\numberwithin{equation}{chapter} %
+%\numberwithin{table}{chapter} %
+%\numberwithin{figure}{chapter} %
+
+\makeatletter  %% this is crucial
+ \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                        {-2\p@ \@plus -0.5\p@ \@minus -0.5\p@}%
+                        %{8\p@ \@plus 4\p@ \@minus 4\p@}%     <-- this is copied from the subsection command
+                        {2\p@ \@plus 1\p@ \@minus 1\p@}%     <-- this is copied from the subsection command
+                        {\normalfont\normalsize\bfseries\boldmath
+                         \rightskip=\z@ \@plus 8em
+ \pretolerance=10000 }}
+\makeatother   %% this is crucial
+
+%---------- Inicio do Documento ----------
+\begin{document}
+
+\capa % geracao automatica da capa
+
+\folhaderosto % geracao automatica da folha de rosto
+
+% dedicatória (opcional)
+%\begin{dedicatoria}
+% Texto da dedicat\'oria.
+%\end{dedicatoria}
+
+% agradecimentos (opcional)
+%\begin{agradecimentos}
+% Texto dos agradecimentos.
+%\end{agradecimentos}
+
+% epigrafe (opcional)
+%\begin{epigrafe}
+%\end{epigrafe}
+
+%resumo
+%\begin{resumo}
+
+%Incluir o resumo aqui
+
+%\end{resumo}
+
+%abstract
+%\begin{abstract}
+
+%Include the abstract here
+
+%\end{abstract}
+
+% listas que recomenda-se a partir de 5 elementos
+%\listadefiguras % geracao automatica da lista de figuras
+
+%\listadetabelas % geracao automatica da lista de tabelas
+
+\listadesiglas % geracao automatica da lista de siglas
+%Constituída de uma relação alfabética das abreviaturas e siglas utilizadas no texto, seguido das palavras ou expressões correspondentes grafadas por extenso. Utilizada apenas se houver siglas.
+
+%\listadesimbolos % geracao automatica da lista de simbolos
+%Elaborado de acordo com a ordem apresentada no texto, seguido do significado correspondente. Utilizada apenas se houver símbolos.
+
+% sumario
+\sumario % geracao automatica do sumario
+
+%---------- Inicio do Texto ----------
+
+\setcounter{page}{3} % *** Necessário arrumar manualmente antes de imprimir
+
+\input{01_introducao}
+%\input{01_introducao_corrigida}
+\input{02_levantamentoBib}
+%\input{03_metodologia}
+%\input{04_recursos}
+%\input{05_viabilidade}
+%\input{06_contexto}
+%\input{07_conclusao}
+%\input{exReferencias}
+
+\bibliography{referencias}
+
+%---------- Apêndices e Anexos ----------
+% Apêndice
+%\appendix
+%\input{apendice}
+
+% Anexo
+%\appendix
+%\renewcommand{\appendixname}{Anexo} % Para criar Anexo ao invés de Apêndice
+%\input{anexo}
+
+\end{document}
