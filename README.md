@@ -3,6 +3,9 @@ TCC-Proposta
 
 Repositório para versionamento da proposta de TCC (Engenharia de Computação, UTFPR).
 
+Autores: 
+Gionatta e Giusepe
+
 =======================================
 PREPARANDO O AMBIENTE
 =======================================
