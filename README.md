@@ -31,24 +31,15 @@ MODIFICANDO O REPOSITÓRIO LOCAL/REMOTO
 =======================================
 
 1. Adicionando arquivos no controle de versão:
-git add nome_do_arquivo
-
-Para adicionar um diretório, com todos os seus arquivos:
-git add nome_do_diretorio
+git add nome_do_arquivo. Para adicionar um diretório, com todos os seus arquivos: git add nome_do_diretorio
 
 2. Antes de enviar as alterações para o repositório remoto, é necessário fazer o commit das alterações (localmente):
-git commit -a -m 'Alteração de arquivos.'
-
-Pode-se utilizar o comando git status para verificar se há arquivos para serem adicionados no controle de versão e quais serão adicionados/removidos.
+git commit -a -m 'Alteração de arquivos.'. Pode-se utilizar o comando git status para verificar se há arquivos para serem adicionados no controle de versão e quais serão adicionados/removidos.
 
 3. Enviar para o repositório remoto:
 
-3.1 se o repositório remoto não foi adicionado ainda (não foi configurado):
-	git remote add origin https://github.com/mocgm/TCC-Proposta.git;
-	git push -u origin master
+4. se o repositório remoto não foi adicionado ainda (não foi configurado): git remote add origin https://github.com/mocgm/TCC-Proposta.git; git push -u origin master
 
-3.2 senão (se o repositório foi clonado, por exemplo):
-	git push -u origin master (primeiro push apenas, utilizar o -u para lembrar qual é o repositório Upstream);
-	git push
+5. senão (se o repositório foi clonado, por exemplo): git push -u origin master (primeiro push apenas, utilizar o -u para lembrar qual é o repositório Upstream); git push
 
-4. Atualizar o repositório: git pull
+6. Atualizar o repositório: git pull
