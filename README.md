@@ -47,3 +47,5 @@ Pode-se utilizar o comando git status para verificar se há arquivos para serem 
 3.2 senão (se o repositório foi clonado, por exemplo):
 	git push -u origin master (primeiro push apenas, utilizar o -u para lembrar qual é o repositório Upstream);
 	git push
+
+4. Atualizar o repositório: git pull

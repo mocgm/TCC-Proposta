@@ -11,28 +11,6 @@ Um outro enfoque, mais empresarial, apresentado por \citeonline{walravens}, menc
 Em vista disso, sistemas operacionais desenvolvidos para \emph{smartphones} inspiram desenvolvedores a conceber aplicativos e serviços que aperfeiçoam a vida nas cidades de diversas formas diferentes, como por exemplo, facilitando acesso à informação sobre o transporte publico. Além disto, à medida que os \emph{smartphones} se tornam mais acessíveis e populares, cria-se o desejo de que se tornem eminentes ferramentas na busca de uma cidade mais inteligente \cite{walravens}.
 
 
-
-
-%A fundamentação teórica atribui, essencialmente, credibilidade ao trabalho, faz referência às pesquisas e aos conhecimentos já construídos e publicados, situando a evolução do assunto e, assim, dando sustentação ao tema que está sendo estudado.
-
-%É preciso situar historicamente a evolução do tema, quais as abordagens já investigadas, qual o estágio atual do conhecimento sobre o assunto ou quais as tendências que se apresentam.
-
-%É necessário apresentar uma análise do estado da arte do problema abordado. Não se trata de uma simples transcrição de pequenos textos ou citações, mas sim de uma sistematização de ideias, fundamentos, conceitos e proposições de vários autores, apresentados de forma lógica, encadeada e descritiva, demonstrando que foram estudados e analisados pelo autor.
-
-%Deve-se realizar o levantamento bibliográfico junto a diferentes fontes documentais, como livros, obras de referência, periódicos científicos, teses, dissertações, monografias, artigos, dentre outros.
-
-%inicio
-
-%Um aplicativo que aproxima-se bastante do projeto proposto é o chamado ``Waze''. O aplicativo foi comprado pela Google em 2013 por cerca de US$\$$ 1,3 bilhões. Cohan aponta quatro grandes motivos para a compra do aplicativo pela Google.
-
-%Segundo Cohan, um dos motivos é o compromisso que um usuário adquire ao utilizar o Waze. A comunidade de usuários beira os 50 milhões; são 50 milhões de usuários contribuindo com informações sobre o trânsito, em praticamente qualquer local do planeta, à todo momento. A comunidade atribui espécies de ``recompensas'', através de pontuações e insígnias, à usuários que realmente são comprometidos em ajudar os outros (COHAN). A Google pode aproveitar esse esquema de comunidades de usuários e \emph{crowdsourcing} para aplicar em futuros projetos. 
-
-%Outro fator importante é que o Waze acaba sendo um complemento ao serviço Google Maps, bastante popular. O aplicativo permite que usuários notifiquem os outros sobre acidentes, radares e ruas bloqueadas, por exemplo, através da utilização de \emph{crowdsourcing}. Para Cohan, o Waze apresenta-se não apenas como um complemento, mas também uma alternativa ao tradicional Google Maps. 
-
-%(TODO: INCLUIR FONTE DO COHAN http://www.forbes.com/sites/petercohan/2013/06/11/four-reasons-for-google-to-buy-waze/)
-
-%(TODO: DESCREVER FUNCIONAMENTO DO WAZE)
-
 \section{Crowdsourcing}
 
 Outro aspecto importante  a ser mencionado é a caracterização de \emph{crowdsourcing}, no que tange inteligência coletiva. À grosso modo, entende-se inteligência coletiva como quando indivíduos de um determinado grupo, que possui interesse por determinado assunto, combinam seus conhecimentos a fim de encontrar a solução para um determinado problema.  Através da interação social, o conhecimento individual é compartilhado, corrigido, processado, enriquecido e avaliado. Normalmente, os resultados colhidos são melhores que os obtidos por um único indivíduo. Talvez a aplicação mais difundida desse conceito seja a Wikipedia  \cite{schuurman}. 
@@ -49,32 +27,19 @@ Conforme já relacionado na Introdução, \citeonline{sujatha} propuseram um sis
 
 Três são os atores do sistema: os passageiros, os chamados ``coordenadores'' do ônibus e as pessoas que estão aguardando em um ponto. Todos os atores necessitam de um \textit{smartphone} com sistema operacional Android conectado à Internet. Continuamente, os passageiros e os ``coordenadores'' alimentam um banco de dados com informações sobre o ônibus. Essas informações podem ser as coordenadas do ônibus, obtidas através do GPS integrado ao \emph{smartphone}, ou até mesmo a ``situação'' do ônibus -- se ele está lotado ou vazio, se houve algum acidente, se o ônibus está atrasado, entre outros. Essas informações ficam armazenadas em um banco de dados para serem acessadas, posteriormente, por alguém que esteja utilizando o aplicativo, principalmente usuários que estão aguardando um ônibus em algum ponto. 
 
-%Em linhas gerais, os objetivos do MBTS são os seguintes \cite{sujatha}:
-
-%\begin{itemize}
-%\item Utilização do GPS para obter a posição do ônibus e GSM para transmissão de informação.
-%\item Obtenção da posição do ônibus (latitude e longitude) em diferentes intervalos de tempo.
-%\item Transmissão da posição do veículo e outras informações (\emph{feedbacks}) para uma ``estação de monitoramento''  (o servidor que hospeda o banco de dados), depois de um intervalo de tempo especificado.
-%\item Localizar a posição do veículo no Google Maps através de
-%solicitação de rastreio, disponível pelo aplicativo móvel.
-%\item Fornecer ao usuário final todas as informações relacionadas ao ônibus (\emph{feedbacks}), bem como a posição do veículo.
-%\end{itemize}
-
-A arquitetura do MBTS pode ser observada na Figura \ref{fig:archMBTS}. Basicamente, consiste de duas aplicações, uma Web e outra Android. A primeira permite o registro de usuários e ônibus e a segunda é utilizada para rastreio. A aplicação Web, desenvolvida em JSP, é voltada para o administrador do sistema e também funciona como um ``middleware'' para que a aplicação Android se conecte ao banco de dados e armazene informações \cite{sujatha}.
-
-\begin{figure}[h]
-\begin{center}
-    \includegraphics[width=0.6\columnwidth]{../figs/arch_mbts.png}
-    \caption{Arquitetura do MBTS.}Fonte: \cite{sujatha}
-    \label{fig:archMBTS}
-\end{center}
-\end{figure}
-
-\newpage
+A arquitetura do MBTS pode ser observada na Figura \ref{fig:archMBTS}. Basicamente, consiste de duas aplicações, uma Web e outra Android. A primeira permite o registro de usuários e ônibus e a segunda é utilizada para rastreio. A aplicação Web, desenvolvida em \sigla{JSP}{JavaServer Pages} (\textit{JavaServer Pages}), é voltada para o administrador do sistema e também funciona como um ``middleware'' para que o usuário, através da aplicação Android, se conecte ao banco de dados e armazene ou solicite informações. Na figura, o usuário pode representar um passageiro, um coordenador ou uma pessoa que esteja aguardando em um ponto de ônibus \cite{sujatha}.
 
 Uma outra pesquisa neste área de acompanhamento de ônibus, envolve a utilização de \sigla{RF}{Radio frequência} (Radio frequência). Foi desenvolvida por \citeonline{paradells}.
 
 Os autores propõe a utilização de uma rede de dados composta por transmissores e receptores RF. Os transmissores situam-se nos ônibus, os quais transmitem informações para os receptores, que situam-se nos pontos de ônibus que, basicamente, são os nós da rede. Assim que um ônibus se aproxima de um ponto de ônibus - nó - inicia a transmissão de informações relevantes, captadas por sensores atrelados ao veículo. Essas informações podem ser usadas/acessadas por um usuário que está aguardando no referido ponto de ônibus. 
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=1\columnwidth]{../figs/arquitetura_mbts.png}
+    \caption{Arquitetura do MBTS.}Fonte: Adaptado de \cite{sujatha}.
+    \label{fig:archMBTS}
+\end{center}
+\end{figure}
 
 Uma limitação do sistema baseado em RF, e percebida pelos próprios autores, diz respeito à distância entre o ônibus e os nós da rede (neste caso os pontos de ônibus). Uma vez que sensores baseados em radio frequência possuem limitações de distância e na transmissão dos dados, acabam limitando a velocidade desenvolvida pelo veículo, o que torna o projeto inviável. 
 
@@ -84,14 +49,12 @@ Ainda, as informações só podem ser coletadas por usuários que já estão pr�
 
 Informações de tempo-real são coletadas através do GPS equipado nos ônibus. Essas informações são utilizadas em um servidor (o que os autores chamam de \emph{Data Center}) para atualizar históricos e melhorar as estimativas, uma vez que é utilizado um algoritmo para predição de tempos de viagem. Esses históricos se referem à relatórios de quatro meses, com informações sobre tempos de viagem e velocidades dos veículos. Essas informações são analisadas e passam por um classificador, e uma vez processadas, são repassadas para qualquer dispositivo móvel conectados em uma rede sem fio, através de \emph{broadcast} \cite{alves}.
 
-\newpage
-
 A Figura \ref{fig:archLisbon} descreve de forma simplificada o sistema proposto por \citeonline{alves}. Nota-se claramente que dados históricos e de tempo-real são coletados com o auxílio do GPS instalado no ônibus. Esses dados passam pelo \emph{Data Center} e são utilizados como entrada para um algoritmo de predição. Uma vez processados, distribuem-se os dados para dispositivos móveis através de \emph{broadcast.}
 
 \begin{figure}[h]
 \begin{center}
-    \includegraphics[width=0.85\columnwidth]{../figs/arch_lisbon.png}
-    \caption{Arquitetura do \emph{Trip-planner}.}Fonte: \cite{alves}
+    \includegraphics[width=0.85\columnwidth]{../figs/arquitetura_tripplanner.png}
+    \caption{Arquitetura do \emph{Trip-planner}.}Fonte: Adaptado de \cite{alves}
     \label{fig:archLisbon}
 \end{center}
 \end{figure}
