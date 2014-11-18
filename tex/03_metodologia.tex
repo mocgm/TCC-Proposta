@@ -1,112 +1,86 @@
 \chapter{Metodologia}\label{cap:metodologia}
 
-A metodologia é uma descrição técnica de como será desenvolvido ou foi desenvolvido o trabalho. Devem estar detalhadas, de forma lógica, linear e cronológica, todas as etapas do projeto.
-
-Deve ser explicado como o produto será gerado, quais são os principais fundamentos (algoritmos, paradigmas, teorias) e tecnologias (ambientes de desenvolvimento, linguagens de programação, plataformas de hardware) a serem empregados.
+Neste capítulo apresenta-se a metodologia a ser empregada a fim de alcançar os desígnios do projeto. Para tanto, apresenta-se as arquiteturas de rede a serem empregadas e, na sequência, as tecnologias, tais como o ambiente de programação, a linguagem de programação, mecanismos para controle de versão e, por fim, a plataforma de software. 
 
 \section{Fundamentos}\label{s:fundamentos}
-Indicar quais são os quais são os principais fundamentos (algoritmos, paradigmas, teorias) a serem empregados.
-Cada fundamento utilizado deve ser justificado.
+
+Nesta seção serão apresentados os fundamentos a serem empregados no projeto.
+
+\subsection{Arquitetura DTN e arquitetura P2P}
+
+Sistemas \sigla{P2P}{\emph{Peer-to-Peer}} (\emph{Peer-to-Peer}) são capazes de fornecer recursos de rede com sobreposição e auto-organização distribuída, com o intuito de prover uma distribuição eficiente dos dados. O mecanismo básico de funcionamento consiste em pares, nos quais uma entidade presta e ao mesmo tempo consume os recursos oferecidos por outras entidades que compõe o sistema. Outras características que estes sistemas apresentam, normalmente, são auto-organização, tolerância a falhas e escalabilidade \cite{italianos}.
+
+Em contrapartida, sistemas baseados em \sigla{DTN}{\emph{Delay Tolerant Networks}} (\emph{Delay Tolerant Networks}) são construídos para operar sobre redes sem fio, com múltiplos saltos. A arquitetura visa oferecer conectividade mesmo se uma comunicação fim a fim não exista por um (in)determinado período de tempo e, assim sendo, os nós intermediários da rede devem armazenar os dados até uma nova oportunidade de comunicação seja possível \cite{italianos}.
+
+Um paradigma típico para as DTNs é o chamado \emph{store-carry-forward} (armazenar, transportar e encaminhar) que consiste na armazenagem de uma mensagem em um nó, o transporte da mesma por este nó e a sua posterior distribuição para outros nós da rede, tão logo surja uma oportunidade para tal \cite{italianos}. Um exemplo simples é exposto na sequência. Supondo que um nó \textbf{S} tenha que se comunicar com um nó \textbf{D}, mas não existe um caminho direto entre os dois; por consequência disso, o nó \textbf{S} terá que armazenar a mensagem. No entanto, \textbf{S} consegue se comunicar com um terceiro nó \textbf{R}, que por sua vez se comunica com o nó \textbf{D}. O nó \textbf{S} pode então encaminhar a mensagem para o nó \textbf{R}, que irá repassá-la para o nó \textbf{D} \cite{italianos}.
+
+Como consequência dos dois mecanismos apresentados, no escopo deste exposto decidiu-se pelo uso de uma arquitetura de rede que combina os dois modelos apresentados anteriormente. Apesar de algumas disparidades entre os dois paradigmas (a mais notável: operarem em camadas distintas de rede) \cite{italianos}, usar-se-á os dois mecanismos em conjunto a fim de oferecer uma arquitetura de rede decentralizada e com boa conectividade a todos os supostos usuários do aplicativo. Ademais, o fato de ambos trabalharem em ambientes decentralizados, auto-organizados e distribuídos \cite{italianos} tornam-se bastantes interessantes para o escopo do trabalho, já que se encaixa perfeitamente no ambiente em que o aplicativo desenvolvido funcionará. 
+
+Outra característica interessante, consiste na possibilidade de operação em mecanismos de rede que não são baseados em meios físicos para propagar informações, como Wi-Fi e Bluetooth, por exemplo. Essa possibilidade é ideal para smartphones, dado que uma gama abundante desses aparelhos possui no mínimo um desses recursos disponíveis. 
 
 \section{Tecnologias}\label{s:tecnologias}
-Indicar quais são os quais são as principais tecnologias (ambientes de desenvolvimento, linguagens de programação, plataformas de hardware) a serem empregadas. Cada tecnologia utilizada deve ser justificada.
 
-\section{Como utilizar figuras}\label{s:usoFiguras}
+A presente seção refere-se às principais tecnologias a serem empregadas no desenvolvimento do projeto, tais como ambientes de desenvolvimento, linguagens de programação, plataforma de software e plataforma de hardware.
 
-A legenda de uma figura deve estar abaixo da mesma (ver Figura \ref{fig:ElemPreTextuais}).
+\subsection{Ambiente de desenvolvimento}
 
-\begin{figure}[h]
-\begin{center}
-    \includegraphics[width=0.5\columnwidth]{./ElemPreTextuais.png}
-    \caption{Elementos Pré-Textuais de um Trabalho Acadêmico.}Fonte: \cite{NormasUTFPR}
-    \label{fig:ElemPreTextuais}
-\end{center}
-\end{figure}
+Pelo fato de o projeto envolver um aplicativo para o sistema operacional Android, é necessário utilizar um ambiente de desenvolvimento específico para essa plataforma.
 
-\section{Como utilizar tabelas}\label{s:usoTabelas}
+O \emph{site} oficial para desenvolvimento de aplicativos Android, Android Developers\footnote{O site pode ser acessado em http://developer.android.com/}, disponibiliza algumas ferramentas para a concepção e teste de aplicativos para a plataforma.
 
-O título de uma tabela deve estar acima da mesma. A Tabela \ref{tab:publicacao} ilustra um exemplo de uma tabela criada no latex\footnote{Se é a primeira vez que está trabalhando com o latex, comece acessando a página do Prof. Hugo Vieira em http://pessoal.utfpr.edu.br/hvieir/orient/}.
+É possível utilizar um \emph{plug-in}, juntamente com o Android SDK, e integrá-los em uma instalação existente da conhecida IDE chamada Eclipse, realizando as devidas configurações manualmente. Uma segunda opção, e que torna a preparação do ambiente de desenvolvimento mais simplificada, é baixar um \emph{bundle} que já inclui o Android SDK, a IDE Eclipse, o \emph{plug-in}, ferramentas de desenvolvimento e uma imagem de sistema para emular um dispositivo Android no Desktop. Dessa forma, é possível depurar aplicações Android diretamente no PC, antes de enviá-lo à um dispositivo real. A terceira opção é utilizar uma IDE alternativa chamada \emph{Android Studio}, que atualmente encontra-se em uma versão Beta.
+
+Por experiências dos integrantes com o referido \emph{bundle}, em projetos anteriores, optou-se por utilizar o mesmo no desenvolvimento deste projeto.
+
+Para testes de software será utilizada a emulação do dispositivo Android provida pelo \emph{bundle}, até onde for possível. É dito isso pois o projeto envolve o uso de GPS, Google Maps e compartilhamento de informações entre usuários (\emph{crowdsourcing}), o que não é possível de ser feito apenas com a utilização de um emulador. Dessa forma, será necessário testar a aplicação em um dispositivo real, como um \emph{smartphone} ou um \emph{tablet}, com sistema operacional Android.
+
+\subsection{Linguagem de programação}
+
+Em relação à linguagem de programação, não há a necessidade de fazer um levantamento dentre as linguagens de programação existentes atualmente e escolher qual será a mais adequada ao projeto. Uma vez que o projeto tem como foco o desenvolvimento de uma aplicação Android, é mandatório que a mesma seja desenvolvida utilizando a linguagem de programação Java juntamente com a API (que contém bibliotecas e ferramentas) incluída no Android SDK. A princípio, não será utilizada nenhuma biblioteca de terceiros (\emph{third-party}).
+
+\subsection{Controle de Versão}
+
+Será utilizado um sistema de controle de versão (\sigla{CVS}{\emph{Control Version System}}, \emph{Control Version System}) para o versionamento do código-fonte do aplicativo Android. Vários são os sistemas de versionamento de arquivos, dentre os quais os mais comuns são o SVN e Git. Para este último, existem repositórios de código-fonte gratuitos, como o GitHub (https://github.com) e o BitBucket (https://bitbucket.org).
+
+O ideal seria manter um servidor próprio com o SVN ou o Git instalados. No entanto, isso poderia envolver custos adicionais, pois seria necessário deixar uma máquina dedicada para o controle de versão e acessível para todos os integrantes do projeto, além de realizar \emph{backups} periódicos.
+
+O GitHub permite que qualquer pessoa crie uma quantidade ilimitada de repositórios gratuitamente e compartilhe-o com quantos colaboradores for necessário. No entanto, o código-fonte fica disponível publicamente, para qualquer um acessar. Para projetos acadêmicos (como TCCs, teses de mestrado e doutorado), isso pode não ser indicado. O GitHub também oferece repositórios privados, com acesso restrito, mas apenas a partir da assinatura de um plano.
+
+Em contrapartida, o BitBucket oferece uma quantidade ilimitada de repositórios privados gratuitamente, permitindo até cinco colaboradores em um projeto. Como o projeto é constituído de dois integrantes e levantou-se a necessidade de versionar o código-fonte sem disponibilizá-lo publicamente, optou-se por utilizar o BitBucket como repositório de código-fonte e o Git como como sistema de controle de versão.
+
+\subsection{Plataforma de software}
+
+Em relação ao sistema operacional Android, levanta-se outra questão. O Android, como sistema operacional, possui diversas versões desde o seu lançamento. Cada uma dessas versões acaba por incluir novas funcionalidades não apenas para o usuário final, mas também, para os desenvolvedores. É certo que existe a chamada retrocompatibilidade, que permite que a grande maioria das aplicações desenvolvidas para uma versão mais recente do S.O., execute sem maiores problemas em uma versão mais antiga. No entanto, para que isso ocorra, muitas vezes a aplicação fica limitada, pois o desenvolvedor é forçado à desabilitar certos recursos que não são compatíveis, de forma alguma, com versões mais antigas da plataforma.
+
+No momento da escrita desta proposta, a versão mais recente do Android é a versão 4.4 (KitKat). A maioria dos dispositivos disponíveis no mercado -- \emph{smartphones} e \emph{tablets} -- possuem uma versão do Android 4.0+ instalada. A mais recente versão do S.O., a versão 5.0 (Lollipop), está prestes a ser lançada, e apenas alguns poucos dispositivos já existentes no mercado receberão a atualização para o novo sistema.
+
+A Tabela \ref{tab:marketShare} fornece informações referentes ao \emph{market share} das versões do Android, desde a 2.2 (Froyo) até a 4.4 (KitKat). Os dados foram coletados através da aplicação Google Play Store em um período de sete dias, finalizando no dia 03 de novembro de 2014. É possível verificar o percentual de quantos dispositivos executam uma determinada versão do sistema operacional. Essas informações são úteis para que o desenvolvedor determine qual versão da plataforma terá como ``alvo''.
 
 \begin{table}[h!]
 %Se o nome da tabela for muito grande, é possível colocar entre colchetes o título reduzido que será mostrado na lista de tabelas e entre aspas o título completo que será mostrado acima da tabela. O mesmo é válido para figuras.
 
-\caption[Distribuição do percentual de artigos segundo o ano de publicação]{Distribuição do percentual de artigos segundo o ano de publicação, período entre 1995 a 2005.}
+\caption[Market Share das versões do Android]{Market Share das versões do Android. Fonte: \cite{androidDevDashboards}}
 \begin{center}
 %\scalebox{0.75}{
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-\textbf{Ano de Publicação} &\textbf{Número de Artigos} & \textbf{\simbolo{\%}{Percentual} de Artigos} \\ \hline \hline
-1995 & 1 & 2,6	\\
-1998 & 3 &	7,9	\\
-1999 & 3 &	7,9  \\
-2000 & 2 & 5,2 \\
-2001 & 5 & 13,2 \\
-2002 & 5 &	13,2 \\
-2003 & 5 &	13,2  \\
-2004 & 7 &	18,4 \\
-2005 & 7 & 18,4 \\
-Total & 38 & 100 \\ \hline
+\textbf{Versão}     &\textbf{Codinome}      & \textbf{API}      &\textbf{Distribuição} \\ \hline \hline
+2.2                 & Froyo                 & 8                 & 0,6$\%$	\\
+2.3.3 - 2.3.7       & Gingerbread           & 10                & 9,7$\%$	\\
+4.0.3 - 4.0.4       & Ice Cream Sandwich    & 15                & 8,5$\%$	\\
+4.1.x               & Jelly Bean            & 16                & 22,8$\%$	\\
+4.2.x               & Jelly Bean            & 17                & 20,8$\%$	\\
+4.3                 & Jelly Bean            & 18                & 7,3$\%$	\\
+4.4                 & KitKat                & 19                & 30,2$\%$	\\ \hline
 \end{tabular}%}
 \end{center}
-\label{tab:publicacao}
+\label{tab:marketShare}
 \end{table}
 
-\section{Como escrever equações}\label{s:Equações}
+Observa-se na tabela que cerca de 10,4$\%$ usuários usa um dispositivo com uma versão antiga da plataforma, de codinome Froyo (2.2) ou Gingerbread (2.3.3 - 2.3.7). Uma parcela ainda menor utiliza as versões Ice Cream Sandwich (4.0.3 - 4.0.4), 8,5$\%$. Grande parte dos usuários -- cerca de 50$\%$ -- utiliza o Android Jelly Bean (4.1.x - 4.3) e 30,2$\%$ utiliza a última versão lançada, KitKat (4.4).
 
-Veja a seguir exemplos equações criadas no latex.
+Portanto, devido à popularidade da versão Jelly Bean (4.1.x - 4.3) do sistema operacional Android, o desenvolvimento do projeto terá como foco dispositivos que executam, no mínimo, esta versão da plataforma.
 
-\begin{equation}\label{eq:ACO1}
-p_{ij}^{k}=\left\{\begin{matrix}
-\frac{\tau _{ij}^{\alpha}(t)}{\sum_{j\in N_{i}^{k}}\tau_{ij}^{\alpha}(t)} \; \text{ se } j\in N_{i}^{k} \\
-0 \; \text{ se } j\notin N_{i}^{k}
-\end{matrix}\right.
-\end{equation}
+\subsection{Plataforma de hardware}
 
-\begin{equation}\label{eq:ACO2}
-\Delta \tau_{ij}^{k}(t) \propto ~\frac{1}{NSaltos^{k}(t)}.
-\end{equation}
-
-\begin{equation}\label{eq:ACO3}
-\tau _{ij}(t+1) = \tau _{ij}(t)+\sum_{k=1}^{n_{k}}\Delta \tau _{i,j}^{k}(t).
-\end{equation}
-
-\begin{equation}\label{eq:ACO4}
-\tau _{ij}(t+\Delta{t}) = (1-\rho)\tau_{ij}(t).
-\end{equation}
-
-\section{Como escrever algoritmos}\label{s:Algoritmos}
-
-O Algoritmo \ref{alg:algS-ACO} apresenta o exemplo de um pseudo-código criado no latex. Para mudar o idioma dos comandos do algoritmo ou encontrar outros comandos, acesse o arquivo algorithmic.sty.
-
-\begin{algorithm}
-\caption{- Pseudocódigo do S-ACO \\ Fonte: Adaptado de \citeonline{ENGELBRECHT2007}}
-\label{alg:algS-ACO}
-\begin{algorithmic}[1]
-\STATE Inicialize o tempo $t \leftarrow 0$
-\STATE Inicialize o valor do feromônio $\tau_{i,j}(0)$
-\STATE Crie $K$ formigas no nó de origem
-\REPEAT
-\FOR{cada formiga $k=1$ to $K$}
-\STATE \COMMENT{Construindo um caminho $x^{k}(t)$}
-\STATE $x^{k}(t) \leftarrow \emptyset$
-\REPEAT
-\STATE Selecione o próximo salto de acordo com a probabilidade da Equação~\ref{eq:ACO1}
-\STATE Adicione o enlace $(i,j)$ ao caminho $x^{k}(t)$
-\UNTIL {o destino seja alcançado}
-\STATE Remova todos os \emph{loops} do caminho $x^{k}(t)$
-\STATE Calcule a qualidade do caminho $f(x^{k}(t))$
-\ENDFOR
-\FORALL{enlace $(i,j)$ do grafo}
-\STATE \COMMENT{Evaporação do Feromônio}
-\STATE Reduza o feromônio $\tau_{i,j}(t)$ usando a Equação~\ref{eq:ACO4}
-\ENDFOR
-\FOR{formiga $k=1$ até $K$}
-\FORALL{enlace $(i,j)$ de $x^{k}(t)$}
-\STATE Atualize a quantidade de feromônio $\tau_{i,j}(t)$ usando as Equações~\ref{eq:ACO2} e~\ref{eq:ACO3}
-\ENDFOR
-\ENDFOR
-\STATE $t \leftarrow t+1$
-\UNTIL{que a condição de parada seja satisfeita}
-\RETURN <caminho $x^{k}(t)$ de melhor qualidade como a solução>
-\end{algorithmic}
-\end{algorithm}
+Para o projeto em questão não será necessária a utilização de uma plataforma de hardware, pois a aplicação executará diretamente sobre um dispositivo móvel, tal como um \textit{smartphone} ou um \textit{tablet}.
