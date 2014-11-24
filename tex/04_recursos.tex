@@ -1,11 +1,38 @@
 \chapter{Recursos de Hardware e Software}\label{cap:recursos}
 
-Apresente aqui todos os recursos essenciais ao desenvolvimento do projeto. O(s) aluno(s) deve(m) mencionar também a origem dos recursos (próprios, externos ou da UTFPR) e a viabilidade do projeto.
+O presente capítulo menciona os recursos de \textit{hardware} e \textit{software} necessários para o desenvolvimento do projeto.
 
 \section{Recursos de Hardware}\label{s:hardware}
 
-Indique aqui os recursos de hardware como componentes digitais, analógicos, fontes de alimentação, baterias, sensores, atuadores, entre outros. Especifique a origem dos recursos de hardware.
+Uma vez que o projeto diz respeito à uma aplicação Android que executará sobre um dispositivo móvel (\textit{smartphones} e \textit{tablets}), não é necessário a compra e/ou o uso de componentes de hardware (microcontroladores, circuitos integrados, fontes de alimentação, bateria, entre outros) para o desenvolvimento do projeto.
+
+%Indique aqui os recursos de hardware como componentes digitais, analógicos, fontes de alimentação, baterias, sensores, atuadores, entre outros. Especifique a origem dos recursos de hardware.
 
 \section{Recursos de Software}\label{s:software}
 
-Devem ser apresentados aqui os recursos de software, incluindo os principais fundamentos (teorias, algoritmos, paradigmas) e tecnologias (ambientes de desenvolvimento, linguagens de programação) a serem empregados. Especifique a origem dos recursos de software.
+%Devem ser apresentados aqui os recursos de software, incluindo os principais fundamentos (teorias, algoritmos, paradigmas) e tecnologias (ambientes de desenvolvimento, linguagens de programação) a serem empregados. Especifique a origem dos recursos de software.
+
+Os recursos de software englobam ambientes de desenvolvimento, linguagem de programação e plataformas de software.
+
+Conforme citado no capítulo anterior, para a programação e teste da aplicação Android será utilizado o ambiente de desenvolvimento \textbf{Eclipse ADT}, que nada mais é que um \textit{bundle} (pacote) que inclui diversos componentes necessários para a concepção do aplicação. Segundo o site oficial para desenvolvimento de aplicações Android, \citeonline{androidDevSDK}, os componentes inclusos são os seguintes:
+
+\begin{itemize}
+\item Ambiente de desenvolvimento Eclipse + \textit{plugin} \sigla{ADT}{\textit{Android Developer Tools}} (\textit{Android Developer Tools});
+\item Android \sigla{SDK}{\textit{Software Development Kit}} (\textit{Software Development Kit});
+\item Ferramentas adicionais para a plataforma Android;
+\item Uma versão da plataforma Android (geralmente a mais recente);
+\item Uma versão da imagem do sistema Android para o emulador.
+\end{itemize}
+
+É possível realizar o \textit{download} do \textit{bundle} gratuitamente no Android Developers, no seguinte link: \url{http://developer.android.com/sdk/index.html}. Há versões disponíveis para Windows e Linux, tanto 32-bit quanto 64-bit. Para Mac OS X, apenas a versão 64-bit encontra-se disponível.
+
+% Verificar
+%O \textit{bundle} também inclui a versão mais recente do JDK, necessário para a compilação de aplicativos na linguagem Java. 
+
+Segundo \citeonline{garySims}, a linguagem de programação ``oficial'' para o desenvolvimento de aplicações Android é Java. Grande parte das aplicações são escritas em Java e suas \sigla{API}{\textit{Application Programming Interface}} (\textit{Application Programming Interface}) são projetadas para serem chamadas primeiramente por Java. É possível desenvolver utilizando linguagens como C e C++, mas isso é algo que a própria Google, desenvolvedora do Android, não incentiva \cite{garySims}.
+
+Pode-se fazer o \textit{download} de várias versões do \sigla{JDK}{\textit{Java Development Kit}} (\textit{Java Development Kit}) gratuitamente a partir do site oficial da Oracle: \url{http://oracle.com}. O JDK é necessário para a compilação de aplicativos na linguagem Java e por consequência, o Eclipse ADT irá utilizá-lo juntamente com o Android SDK para compilação da aplicação Android.
+
+Durante todo o desenvolvimento do projeto, será utilizado o Git como sistema de controle de versão, conforme citado no capítulo anterior. Será criado um repositório privado no BitBucket (\url{https://bitbucket.org}) para código-fonte da aplicação Android. Outro repositório foi criado no GitHub (\url{https://github.com}) para o ``versionamento'' desta proposta, que está sendo escrita em LaTeX. A criação dos repositórios, tanto no BitBucket quanto no GitHub, é gratuita.
+
+Por fim, a plataforma de \textit{software} sobre a qual executará a aplicação Android, é o próprio sistema operacional Android, disponível em diversos \textit{smartphones} e \textit{tablets} existentes no mercado. Conforme estudo apresentado no capítulo anterior, o desenvolvimento da aplicação Android terá como foco sistemas operacionais que executam, no mínimo, a versão 4.1.x (Jelly Bean).
