@@ -1,0 +1,53 @@
+% O label serve para referenciar o capítulo quando necessário
+\chapter{Introdução}\label{cap:introducao}
+
+O conceito de \textit{Smart Cities} (Cidades Inteligentes, em tradução livre) é um sustentáculo elementar para o desenvolvimento urbano sustentável. De certa forma, ele poderia contribuir na solução de diversos problemas críticos, originados a partir da urbanização de grandes cidades como congestionamentos, poluição do meio ambiente, e os limites dos recursos naturais. \cite{pan2013}.
+ 
+Um outro aspecto do conceito de cidades inteligentes a ser considerado, é a importância crescente das tecnologias digitais para um futuro sustentável. Assim sendo, destaca-se seis principais áreas, nas quais essas inovações digitais tem a competência para fazer a diferença: vida inteligente, governança inteligente, economia inteligente, ambiente inteligente, pessoas inteligentes e mobilidade inteligente \cite{schuurman}.
+ 
+Com o uso da tecnologia da informação e comunicação (do inglês {\sigla{ICT}{\emph{Information and Communication Technology}}, \emph{Information and Communication Technology},}) a  análise e mineração de dados de sensoriamento grande cidades é um passo importante para considerá-las uma cidade inteligente. Por exemplo, informações sobre a mobilidade dos veículos e pessoas tornaram-se temas em voga nos últimos tempos  devido à prevalência do \sigla{GPS}{\emph{Global Positioning System}} (\emph{Global Positioning System}) e outras tecnologias de localização. Esse conhecimento sobre a cidade e seus habitantes poderá trazer benefícios nas áreas de transporte, planejamento urbano, saúde pública, segurança pública e comércio \cite{pan2013}.
+ 
+Embora as ações de sensoriamento e mineração dos dados seja de imprescindível importância, algo deve ser feito para transformar esses dados em informações. Nesse sentido, uma abordagem interessante para a resolução desta questão consiste no conceito de \textit{crowdsourcing} \cite{schuurman}.
+
+\citeonline{Howe2006} caracteriza \textit{crowdsourcing} como o fenômeno no qual várias pessoas comuns dedicam seu tempo livre na busca de soluções para um problema de interesse coletivo. Isto posto, a massificação dos chamados \textit{smartphones} e o advento de redes móveis e sem fio tais como o 3G e o WiFi e recentemente, o 4G, permitem que pessoas fiquem conectadas a maior parte do tempo, em qualquer lugar. Dentre os inúmeros benefícios que os \textit{smartphones} fornecem, a possibilidade de troca de informações entre usuários é uma delas, bem como a aplicação do conceito de \textit{crowdsourcing}.
+
+Considera-se o seguinte cenário: uma pessoa que acabou de chegar em um ponto de ônibus, deseja saber onde o mesmo se encontra. Questões como ``será que o ônibus está chegando?'', ``será que vai demorar?'' ou ``será que o ônibus estragou?'' são bastante comuns. Mas como descobrir suas respostas? Infelizmente, não é possível respondê-las apenas com a tabela de horários de chegada dos ônibus, disponível nos terminais e no \textit{site} da \sigla{URBS}{Companhia de Urbanização e Saneamento de Curitiba} (Companhia de Urbanização e Saneamento de Curitiba).
+
+Nesse sentido, é proposto nesse documento uma solução possível para esse quesito. A ideia básica é a construção de um aplicativo que alie conceitos, tanto de \textit{Smart Cities} quanto de \textit{crowdsourcing}, no qual informações em tempo real sobre o transporte coletivo, especificamente no que compete o estado atual de uma linha de ônibus, sejam disponibilizadas aos usuários.
+
+%breve estado da arte
+
+Alguns aplicativos para dispositivos móveis foram desenvolvidos com o objetivo de prover, ao usuário, informações referentes ao transporte público. Um dos aplicativos mais recentes é o chamado ``Busão Curitibano'', lançado em 2013\footnote{Para mais informações sobre o aplicativo, consultar notícia da Gazeta do Povo, disponível em:  http://www.gazetadopovo.com.br/vidaecidadania/conteudo.phtml?id=1377575}. Os desenvolvedores -- e também os usuários do aplicativo -- encontraram algumas resistências por parte da URBS, pois o aplicativo usava a base de dados do transporte coletivo. Devido aos inúmeros acessos, acabava derrubando o servidor da URBS e tornando o serviço de acompanhamento de ônibus indisponível.
+
+Outro aplicativo semelhante foi desenvolvido por \citeonline{sujatha}. Os autores propuseram um sistema chamado \sigla{MBTS}{Mobile Bus Tracking System} (\emph{Mobile Bus Tracking System}) que ajuda qualquer pessoa a obter informações de um determinado ônibus sem fazer ligações ou perturbar passageiros com mensagens \sigla{SMS}{\emph{Short Message Service}} (\emph{Short Message Service}). %O sistema funciona com, basicamente, três atores: os passageiros, os “coordenadores” do ônibus e as pessoas que estão aguardando em um ponto. Todos os atores necessitam de um \textit{smartphone} com sistema operacional Android conectado à Internet. Continuamente, os passageiros e os ``coordenadores'' alimentam um banco de dados com informações sobre o ônibus, tais como as coordenadas do veículo, as quais estarão disponíveis para as pessoas que estão aguardando pelo ônibus.
+Um banco de dados é utilizado para armazenar informações sobre os ônibus (por exemplo, as coordenadas do veículo), as quais estarão disponíveis para acesso através de um aplicativo Android..
+
+\section{Justificativa}
+
+A utilização de uma arquitetura centralizada, estilo cliente--servidor é um ponto comum nos dois trabalhos relacionados. Em ambos, nota-se que a arquitetura encontra-se em uma relação n:1, ou seja, vários clientes para um único servidor. Alguns dos problemas que podem surgir nesse tipo de arquitetura é que o servidor pode ficar sobrecarregado e eventualmente ficar indisponível devido ao grande número de usuários utilizando o serviço, como foi o caso do ``Busão Curitibano''. Além disso, nesse caso, o servidor utilizado não é de propriedade dos desenvolvedores, mas sim da Urbs. Caso a companhia deseje interromper o serviço de fornecimento de dados, o ``Busão Curitibano'' perde sua utilidade. Isso não constitui um problema para o MBTS, pois o mesmo concentra as informações em um servidor próprio, mantido pelos próprios desenvolvedores.
+
+Sendo assim, a principal motivação para o desenvolvimento deste projeto é implementar um aplicativo de acompanhamento de ônibus para dispositivos móveis -- \textit{smartphones} -- que utilize uma rede descentralizada. Nela, os próprios usuários são os nós, que compartilharão informações entre si. Para tal, utilizar como referência o aplicativo móvel ``Waze''\footnote{Uma análise do aplicativo pode ser encontrada em http://www.techtudo.com.br/tudo-sobre/waze.html}, que implementa uma espécie de comunidade para mapeamento do trânsito em tempo real. Através do ``Waze'', cerca de 40 milhões de usuários compartilham informações, no mundo todo \cite{techtudoWaze}.
+
+Além disso, usufruir do recurso de GPS, já utilizado nos ônibus de Curitiba, para fornecer aos usuários a posição dos veículos.
+
+\section{Objetivo geral}
+
+Desenvolver um aplicativo móvel que execute sobre o sistema operacional Android, aliando conceitos de \textit{Smart Cities}
+e \textit{Crowdsourcing}, no qual informações em tempo real sobre o transporte coletivo sejam disponibilizadas aos usuários.
+
+%Desenvolver um aplicativo para \textit{smartphones} que rodam sobre o sistema operacional Android, para acompanhamento de ônibus em Curitiba, unindo idéias de aplicativos já existentes como o ``Waze'' e o ``Busão Curitibano'', e o conceito de \emph{crowdsourcing}.
+
+\section{Objetivos específicos}
+
+\begin{itemize}
+%\item Desenvolver um aplicativo, para \textit{smartphones}, para acompanhamento de ônibus da rede de transporte de Curitiba;
+\item Desenvolver um aplicativo móvel, exclusivamente para \textit{smartphones} e \textit{tablets} com sistema operacional Android, para acompanhamento de ônibus da rede de transporte de Curitiba;
+\item Estudar e implementar no aplicativo o conceito de \textit{crowdsourcing}, para permitir que usuários colaborem entre si com informações pertinentes, através de \textit{feedbacks} pré-definidos no aplicativo;
+\item Desenvolver o aplicativo para que o mesmo seja executado sobre uma plataforma que não exija custos de desenvolvimento;
+\item Implementar uma arquitetura de rede descentralizada, a fim de evitar problemas como sobrecarga de servidor.
+\item Unir ideias de aplicativos móveis já existentes, como o ``Waze'' e o ``Busão Curitibano'', no desenvolvimento do projeto.
+\end{itemize}
+
+\section{Estrutura e organização}
+
+O presente documento encontra-se organizado da seguinte forma. O capítulo 1 apresenta a introdução, com a formulação do problema, justificativa do projeto, objetivo geral e específicos do mesmo. O capítulo 2 apresenta o levantamento bibliográfico, importante para fundamentar o projeto e fornecer um embasamento. A metodologia, que descreve as etapas de desenvolvimento pelas quais o projeto percorrerá, é apresentada no capítulo 3. Os recursos para desenvolvimento do projeto e a viabilidade do mesmo, são apresentados nos capítulos 4 e 5, respectivamente. Por fim, conclusões pertinentes ao desenvolvimento do projeto, tais como dificuldades esperadas e horizontes de projeto, são apresentados no capítulo 6.
