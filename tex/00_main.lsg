@@ -1,15 +1,23 @@
 \contentsline {sigla}{\hbox to\@tempdima {ICT\hfil }{\emph {Information and Communication Technology}}}{4}
 \contentsline {sigla}{\hbox to\@tempdima {GPS\hfil }{\emph {Global Positioning System}}}{4}
 \contentsline {sigla}{\hbox to\@tempdima {URBS\hfil }{Companhia de Urbaniza\IeC {\c c}\IeC {\~a}o e Saneamento de Curitiba}}{5}
-\contentsline {sigla}{\hbox to\@tempdima {MBTS\hfil }{Mobile Bus Tracking System}}{5}
+\contentsline {sigla}{\hbox to\@tempdima {MBTS\hfil }{\textit {Mobile Bus Tracking System}}}{5}
 \contentsline {sigla}{\hbox to\@tempdima {SMS\hfil }{\emph {Short Message Service}}}{5}
-\contentsline {sigla}{\hbox to\@tempdima {DTN\hfil }{\emph {Delay Tolerant Networks}}}{10}
+\contentsline {sigla}{\hbox to\@tempdima {DTN\hfil }{\emph {Delay Tolerant Networks}}}{9}
 \contentsline {sigla}{\hbox to\@tempdima {ACK\hfil }{\textit {Acknowledge}}}{10}
 \contentsline {sigla}{\hbox to\@tempdima {P2P\hfil }{\emph {Peer-to-Peer}}}{10}
-\contentsline {sigla}{\hbox to\@tempdima {JSP\hfil }{JavaServer Pages}}{11}
+\contentsline {sigla}{\hbox to\@tempdima {JSP\hfil }{\textit {JavaServer Pages}}}{11}
 \contentsline {sigla}{\hbox to\@tempdima {RF\hfil }{Radio Frequ\IeC {\^e}ncia}}{11}
-\contentsline {sigla}{\hbox to\@tempdima {CVS\hfil }{\emph {Control Version System}}}{16}
-\contentsline {sigla}{\hbox to\@tempdima {ADT\hfil }{\textit {Android Developer Tools}}}{19}
-\contentsline {sigla}{\hbox to\@tempdima {SDK\hfil }{\textit {Software Development Kit}}}{19}
-\contentsline {sigla}{\hbox to\@tempdima {API\hfil }{\textit {Application Programming Interface}}}{20}
-\contentsline {sigla}{\hbox to\@tempdima {JDK\hfil }{\textit {Java Development Kit}}}{20}
+\contentsline {sigla}{\hbox to\@tempdima {CVS\hfil }{\emph {Control Version System}}}{17}
+\contentsline {sigla}{\hbox to\@tempdima {ADT\hfil }{\textit {Android Developer Tools}}}{20}
+\contentsline {sigla}{\hbox to\@tempdima {SDK\hfil }{\textit {Software Development Kit}}}{20}
+\contentsline {sigla}{\hbox to\@tempdima {API\hfil }{\textit {Application Programming Interface}}}{21}
+\contentsline {sigla}{\hbox to\@tempdima {JDK\hfil }{\textit {Java Development Kit}}}{21}
+\contentsline {sigla}{\hbox to\@tempdima {PERT\hfil }{\textit {Program Evaluation and Review Technique}}}{33}
+\contentsline {sigla}{\hbox to\@tempdima {CPM\hfil }{\textit {Critical Path Method}}}{33}
+\contentsline {sigla}{\hbox to\@tempdima {UAW\hfil }{\textit {Unadjusted Actor Weight}}}{33}
+\contentsline {sigla}{\hbox to\@tempdima {UUCW\hfil }{\textit {Unadjusted Use Case Weight}}}{34}
+\contentsline {sigla}{\hbox to\@tempdima {UUCP\hfil }{\textit {Unadjusted Use Case Point}}}{34}
+\contentsline {sigla}{\hbox to\@tempdima {TCF\hfil }{\textit {Technical Complexity Factor}}}{34}
+\contentsline {sigla}{\hbox to\@tempdima {EF\hfil }{\textit {Environmental Factor}}}{35}
+\contentsline {sigla}{\hbox to\@tempdima {UCP\hfil }{\textit {Use Case Points}}}{35}

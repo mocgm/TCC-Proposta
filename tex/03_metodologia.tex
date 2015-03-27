@@ -1,6 +1,6 @@
 \chapter{Metodologia}\label{cap:metodologia}
 
-Neste capítulo apresenta-se a metodologia a ser empregada a fim de alcançar os desígnios do projeto. Para tanto, apresenta-se de que forma o desenvolvimento será abordado pela equipe e, na sequência, as tecnologias a serem utilizadas, tais como o ambiente de programação, a linguagem de programação, mecanismos para controle de versão e, por fim, a plataforma de software. 
+Neste capítulo apresenta-se a metodologia a ser empregada a fim de alcançar os desígnios do projeto. Para tanto, apresenta-se de que forma o desenvolvimento será abordado pela equipe e, na sequência, as tecnologias a serem utilizadas, tais como o ambiente de programação, a linguagem de programação, mecanismos para controle de versão e, por fim, a plataforma de \textit{software}. 
 
 \section{Abordagem da equipe}\label{s:fundamentos}
 
@@ -24,7 +24,7 @@ Tendo em vista a grande quantidade de usuários que estarão utilizando o aplica
 
 \section{Tecnologias}\label{s:tecnologias}
 
-A presente seção refere-se às principais tecnologias a serem empregadas no desenvolvimento do projeto, tais como ambientes de desenvolvimento, linguagens de programação, plataforma de software e plataforma de hardware.
+A presente seção refere-se às principais tecnologias a serem empregadas no desenvolvimento do projeto, tais como ambientes de desenvolvimento, linguagens de programação, plataforma de \textit{software} e plataforma de \textit{hardware}.
 
 \subsection{Ambiente de desenvolvimento}
 
@@ -32,7 +32,7 @@ Pelo fato de o projeto envolver um aplicativo para o sistema operacional Android
 
 O \emph{site} oficial para desenvolvimento de aplicativos Android, Android Developers\footnote{O site pode ser acessado em http://developer.android.com/}, disponibiliza algumas ferramentas para a concepção e teste de aplicativos para a plataforma.
 
-É possível utilizar um \emph{plug-in}, juntamente com o Android SDK, e integrá-los em uma instalação existente da conhecida IDE chamada Eclipse, realizando as devidas configurações manualmente. Uma segunda opção, e que torna a preparação do ambiente de desenvolvimento mais simplificada, é baixar um \emph{bundle} que já inclui o Android SDK, a IDE Eclipse, o \emph{plug-in}, ferramentas de desenvolvimento e uma imagem de sistema para emular um dispositivo Android no Desktop. Dessa forma, é possível depurar aplicações Android diretamente no PC, antes de enviá-lo à um dispositivo real. A terceira opção é utilizar uma IDE alternativa chamada \emph{Android Studio}, que atualmente encontra-se em uma versão Beta.
+É possível utilizar um \emph{plug-in}, juntamente com o Android SDK, e integrá-los em uma instalação existente da conhecida IDE chamada Eclipse, realizando as devidas configurações manualmente. Uma segunda opção, e que torna a preparação do ambiente de desenvolvimento mais simplificada, é baixar um \emph{bundle} que já inclui o Android SDK, a IDE Eclipse, o \emph{plug-in}, ferramentas de desenvolvimento e uma imagem de sistema para emular um dispositivo Android no \textit{Desktop}. Dessa forma, é possível depurar aplicações Android diretamente no PC, antes de enviá-lo à um dispositivo real. A terceira opção é utilizar uma IDE alternativa chamada \emph{Android Studio}, que atualmente encontra-se em uma versão Beta.
 
 Por experiências dos integrantes com o referido \emph{bundle}, em projetos anteriores, optou-se por utilizar o mesmo no desenvolvimento deste projeto.
 
@@ -52,18 +52,18 @@ O GitHub permite que qualquer pessoa crie uma quantidade ilimitada de repositór
 
 Em contrapartida, o BitBucket oferece uma quantidade ilimitada de repositórios privados gratuitamente, permitindo até cinco colaboradores em um projeto. Como o projeto é constituído de dois integrantes e levantou-se a necessidade de versionar o código-fonte sem disponibilizá-lo publicamente, optou-se por utilizar o BitBucket como repositório de código-fonte e o Git como como sistema de controle de versão.
 
-\subsection{Plataforma de software}
+\subsection{Plataforma de \textit{software}}
 
 Em relação ao sistema operacional Android, levanta-se outra questão. O Android, como sistema operacional, possui diversas versões desde o seu lançamento. Cada uma dessas versões acaba por incluir novas funcionalidades não apenas para o usuário final, mas também, para os desenvolvedores. É certo que existe a chamada retrocompatibilidade, que permite que a grande maioria das aplicações desenvolvidas para uma versão mais recente do S.O., execute sem maiores problemas em uma versão mais antiga. No entanto, para que isso ocorra, muitas vezes a aplicação fica limitada, pois o desenvolvedor é forçado à desabilitar certos recursos que não são compatíveis, de forma alguma, com versões mais antigas da plataforma.
 
-No momento da escrita desta proposta, a versão mais recente do Android é a versão 4.4 (KitKat). A maioria dos dispositivos disponíveis no mercado -- \emph{smartphones} e \emph{tablets} -- possuem uma versão do Android 4.0+ instalada. A mais recente versão do S.O., a versão 5.0 (Lollipop), está prestes a ser lançada, e apenas alguns poucos dispositivos já existentes no mercado receberão a atualização para o novo sistema.
+No momento da escrita deste documento, a versão mais recente do Android é a versão 4.4 (KitKat). A maioria dos dispositivos disponíveis no mercado -- \emph{smartphones} e \emph{tablets} -- possuem uma versão do Android 4.0+ instalada. A mais recente versão do S.O., a versão 5.0 (Lollipop), está prestes a ser lançada, e apenas alguns poucos dispositivos já existentes no mercado receberão a atualização para o novo sistema.
 
 A Tabela \ref{tab:marketShare} fornece informações referentes ao \emph{market share} das versões do Android, desde a 2.2 (Froyo) até a 4.4 (KitKat). Os dados foram coletados através da aplicação Google Play Store em um período de sete dias, finalizando no dia 03 de novembro de 2014. É possível verificar o percentual de quantos dispositivos executam uma determinada versão do sistema operacional. Essas informações são úteis para que o desenvolvedor determine qual versão da plataforma terá como ``alvo''.
 
 \begin{table}[h!]
 %Se o nome da tabela for muito grande, é possível colocar entre colchetes o título reduzido que será mostrado na lista de tabelas e entre aspas o título completo que será mostrado acima da tabela. O mesmo é válido para figuras.
 
-\caption[Market Share das versões do Android]{Market Share das versões do Android. Fonte: \cite{androidDevDashboards}}
+\caption[\textit{Market Share} das versões do Android]{\textit{Market Share} das versões do Android. Fonte: \cite{androidDevDashboards}}
 \begin{center}
 %\scalebox{0.75}{
 \begin{tabular}{|c|c|c|c|}
@@ -85,9 +85,9 @@ Observa-se na tabela que cerca de 10,4$\%$ usuários usa um dispositivo com uma 
 
 Portanto, devido à popularidade da versão Jelly Bean (4.1.x - 4.3) do sistema operacional Android, o desenvolvimento do projeto terá como foco dispositivos que executam, no mínimo, esta versão da plataforma.
 
-\subsection{Plataforma de hardware}
+\subsection{Plataforma de \textit{hardware}}
 
-Para o projeto em questão não será necessária a utilização de uma plataforma de hardware, pois a aplicação executará diretamente sobre um dispositivo móvel, tal como um \textit{smartphone} ou um \textit{tablet}.
+Para o projeto em questão não será necessária a utilização de uma plataforma de \textit{hardware}, pois a aplicação executará diretamente sobre um dispositivo móvel, tal como um \textit{smartphone} ou um \textit{tablet}.
 
 \section{Etapas de desenvolvimento}
 
@@ -95,4 +95,4 @@ Inicialmente será feito um estudo das APIs disponíveis no Android SDK, e um le
 
 Com os diagramas UML já projetados, será preparado o ambiente de desenvolvimento, realizando-se o \textit{download} do \textit{bundle}, instalação de \textit{drivers} para depuração em um dispositivo móvel real via cabo USB e configurações necessárias. Na sequência, dar-se-á início à implementação da aplicação.
 
-Inicialmente, os testes serão realizados no emulador Android, disponibilizado pelo \textit{bundle}, conforme citado na seção anterior. Testes mais complexos serão feitos em um dispositivo real (\textit{smartphone} e/ou \textit{tablet}) que execute o sistema operacional Android com versão 4.1.x, pelo menos. Ressalta-se que não será necessária aquisição deste(s) dispositivo(s), uma vez que os próprios integrantes do projeto os possuem.
+Inicialmente, os testes serão realizados no emulador Android, disponibilizado pelo \textit{bundle}, conforme citado na seção anterior. Testes mais complexos serão feitos em um dispositivo real (\textit{smartphone} e/ou \textit{tablet}) que execute o sistema operacional Android com versão 4.1.x, pelo menos.
